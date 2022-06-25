@@ -14,7 +14,7 @@ use pocketmine\world\World;
 final class Factory
 {
     private const MINIONS = array(
-        Miner::class => Miner::NAME
+        Miner::class => Miner::TYPE
     );
 
     public static function registerMinions(): void
