@@ -1,0 +1,8 @@
+---
+name: BetterMinions
+author: HighestDreams
+version: 0.0.1
+main: MCPE_PLUGINS\BetterMinions\Loader
+api: 4.0.0
+src-namespace-prefix: MCPE_PLUGINS\BetterMinions
+...
