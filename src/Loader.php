@@ -23,6 +23,11 @@ final class Loader extends PluginBase
         $this->getServer()->getPluginManager()->registerEvents(new EventsHandler(), $this);
     }
 
+    #[Pure] public function minion(): MinionHandler
+    {
+        return new MinionHandler();
+    }
+
     public static function getInstance(): self
     {
         return self::$Instance;

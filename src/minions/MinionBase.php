@@ -6,10 +6,20 @@ namespace MCPE_PLUGINS\BetterMinions\minions;
 
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\event\entity\EntityDamageEvent;
+use pocketmine\nbt\tag\CompoundTag;
 use pocketmine\player\Player;
 
 trait MinionBase
 {
+    protected function initEntity(CompoundTag $nbt): void
+    {
+        parent::initEntity($nbt);
+
+        $this->level = $nbt->getInt('level', 1);
+        $this->setNameTag('§l§d[§e' . self::TYPE . '§d]');
+        $this->setNameTagAlwaysVisible(true);
+    }
+
     public function canBeMovedByCurrents(): bool
     {
         return false;

@@ -36,8 +36,8 @@ final class MinionsShop extends SimpleForm
             $type = match ($button) {
                 0 => Miner::TYPE,
             };
-            $spawn_egg = new SpawnEgg($type);
-            $inventory->addItem($spawn_egg->getItem());
+            $spawn_egg = new SpawnEgg();
+            $inventory->addItem($spawn_egg->getItem($type));
             $player->sendMessage("You bought ×1 Minion $type.");
 
             return;
